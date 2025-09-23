@@ -1,21 +1,16 @@
-FROM node:15 as builder
+# Etapa de build
+FROM node:18 AS builder
 
-WORKDIR
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
 
-COPY
+# Etapa de producción
+FROM node:18-alpine
 
-RUN 
-
-COPY
-
-RUN 
-
-FROM
-
-WORKDIR
-
-COPY
-
-RUN 
-
-ENTRYPOINT 
+WORKDIR /app
+COPY --from=builder /app ./
+ENV NODE_ENV=production
+CMD ["npm", "start"]
