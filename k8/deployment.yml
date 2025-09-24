@@ -20,7 +20,7 @@ spec:
       - name: fsl-app
         image: 289050431358.dkr.ecr.us-east-1.amazonaws.com/fsl-app:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
         env:
         - name: MY_SECRET
           valueFrom:
