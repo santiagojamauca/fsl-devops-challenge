@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fsl-app
-        image: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/fsl-app:latest
+        image: 289050431358.dkr.ecr.us-east-1.amazonaws.com/fsl-app:latest
         ports:
         - containerPort: 8080
         env:
